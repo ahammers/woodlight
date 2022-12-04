@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>qml;cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>qrc;rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Apps">
+      <UniqueIdentifier>{988a1f6e-ba70-473a-a846-3f68292e8b81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Apps">
+      <UniqueIdentifier>{79f8766f-b7e8-4f41-8007-b73591b8da40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Tools">
+      <UniqueIdentifier>{e3941772-c842-45d6-9749-2b7cddcd8078}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Tools">
+      <UniqueIdentifier>{b25fbae5-58d3-4bba-b178-918a56e76b53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Compatibility">
+      <UniqueIdentifier>{5a5c3a3c-b707-463c-afe3-6a8099cea1e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Compatibility">
+      <UniqueIdentifier>{6f90e0fb-64d1-45fd-b213-e21b154a28b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\System">
+      <UniqueIdentifier>{65834abb-39c6-4dfd-b6eb-635d53dec079}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\System">
+      <UniqueIdentifier>{ba79ad51-65a9-478f-8505-625f3e7ece50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ESP32">
+      <UniqueIdentifier>{6a590769-cff9-4a4c-b5cd-e38816718392}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="WoodLightSim.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtUic Include="WoodLightSim.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtMoc Include="WoodLightSim.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClCompile Include="WoodLightSim.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WoodLightWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MD_MAX72xx_font.cpp">
+      <Filter>Source Files\Compatibility</Filter>
+    </ClCompile>
+    <ClCompile Include="Preferences.cpp">
+      <Filter>Source Files\Compatibility</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundEffect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\WoodLightFirmware\WLApp.cpp">
+      <Filter>Source Files\Apps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\WoodLightFirmware\WLApp_Beep.cpp">
+      <Filter>Source Files\Apps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\WoodLightFirmware\WLApp_Clock.cpp">
+      <Filter>Source Files\Apps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\WoodLightFirmware\WLApp_HomeAssistant.cpp">
+      <Filter>Source Files\Apps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\WoodLightFirmware\WLApp_Menu.cpp">
+      <Filter>Source Files\Apps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\WoodLightFirmware\WLApp_Pacman.cpp">
+      <Filter>Source Files\Apps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\WoodLightFirmware\WLApp_Setup.cpp">
+      <Filter>Source Files\Apps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\WoodLightFirmware\WLApp_Snake.cpp">
+      <Filter>Source Files\Apps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\WoodLightFirmware\WLBeeps.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\WoodLightFirmware\WLButtons.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\WoodLightFirmware\WLInput.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\WoodLightFirmware\WLMenu.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\WoodLightFirmware\WLStr.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\WoodLightFirmware\WLSystem.cpp">
+      <Filter>Source Files\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\WoodLightFirmware\WLDisplay.cpp">
+      <Filter>Source Files\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\WoodLightFirmware\WLApp_Update.cpp">
+      <Filter>Source Files\Apps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\WoodLightFirmware\WLScroller.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="WiFi.cpp">
+      <Filter>Source Files\Compatibility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\WoodLightFirmware\WLApp_Message.cpp">
+      <Filter>Source Files\Apps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\WoodLightFirmware\WLAppExt.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\WoodLightFirmware\WLHttp.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\WoodLightFirmware\WLJson.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="WoodLightWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Preferences.h">
+      <Filter>Header Files\Compatibility</Filter>
+    </ClInclude>
+    <ClInclude Include="MD_MAX72xx_font.h">
+      <Filter>Header Files\Compatibility</Filter>
+    </ClInclude>
+    <ClInclude Include="MD_MAX72xx_lib.h">
+      <Filter>Header Files\Compatibility</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundEffect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\WoodLightFirmware\WLApp.h">
+      <Filter>Header Files\Apps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\WoodLightFirmware\WLApp_Beep.h">
+      <Filter>Header Files\Apps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\WoodLightFirmware\WLApp_Clock.h">
+      <Filter>Header Files\Apps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\WoodLightFirmware\WLApp_HomeAssistant.h">
+      <Filter>Header Files\Apps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\WoodLightFirmware\WLApp_Menu.h">
+      <Filter>Header Files\Apps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\WoodLightFirmware\WLApp_Pacman.h">
+      <Filter>Header Files\Apps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\WoodLightFirmware\WLApp_Setup.h">
+      <Filter>Header Files\Apps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\WoodLightFirmware\WLApp_Snake.h">
+      <Filter>Header Files\Apps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\WoodLightFirmware\WLBeeps.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\WoodLightFirmware\WLButtons.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\WoodLightFirmware\WLInput.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\WoodLightFirmware\WLMenu.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\WoodLightFirmware\WLStr.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\WoodLightFirmware\WLSystem.h">
+      <Filter>Header Files\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\WoodLightFirmware\WLDisplay.h">
+      <Filter>Header Files\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\WoodLightFirmware\WLApp_Update.h">
+      <Filter>Header Files\Apps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\WoodLightFirmware\WLScroller.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="WiFi.h">
+      <Filter>Header Files\Compatibility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\WoodLightFirmware\WLApp_Message.h">
+      <Filter>Header Files\Apps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\WoodLightFirmware\WLAppExt.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\WoodLightFirmware\WLHttp.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="ArduinoJson.h">
+      <Filter>Header Files\Compatibility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\WoodLightFirmware\WLJson.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\WoodLightFirmware\WoodLightFirmware.ino">
+      <Filter>Header Files\ESP32</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32922.545
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WoodLightSetup", "WoodLightSetup\WoodLightSetup.vcxproj", "{840A2362-7C2E-4889-95C8-DC181ACF9A5A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WoodLightSim", "WoodLightSim\WoodLightSim.vcxproj", "{6D35BC7E-F3C7-464F-95E7-AE2859EC101F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{840A2362-7C2E-4889-95C8-DC181ACF9A5A}.Debug|x64.ActiveCfg = Debug|x64
+		{840A2362-7C2E-4889-95C8-DC181ACF9A5A}.Debug|x64.Build.0 = Debug|x64
+		{840A2362-7C2E-4889-95C8-DC181ACF9A5A}.Release|x64.ActiveCfg = Release|x64
+		{840A2362-7C2E-4889-95C8-DC181ACF9A5A}.Release|x64.Build.0 = Release|x64
+		{6D35BC7E-F3C7-464F-95E7-AE2859EC101F}.Debug|x64.ActiveCfg = Debug|x64
+		{6D35BC7E-F3C7-464F-95E7-AE2859EC101F}.Debug|x64.Build.0 = Debug|x64
+		{6D35BC7E-F3C7-464F-95E7-AE2859EC101F}.Release|x64.ActiveCfg = Release|x64
+		{6D35BC7E-F3C7-464F-95E7-AE2859EC101F}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B6FE2077-F335-46A4-8996-CA7084FF7C3E}
+	EndGlobalSection
+EndGlobal

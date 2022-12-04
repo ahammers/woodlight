@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{6D35BC7E-F3C7-464F-95E7-AE2859EC101F}</ProjectGuid>
+    <Keyword>QtVS_v304</Keyword>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">10.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">10.0</WindowsTargetPlatformVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
+    <QtInstall>5_64_2019</QtInstall>
+    <QtModules>core;network;gui;widgets</QtModules>
+    <QtBuildConfig>debug</QtBuildConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
+    <QtInstall>5_64_2019</QtInstall>
+    <QtModules>core;network;gui;widgets</QtModules>
+    <QtBuildConfig>release</QtBuildConfig>
+  </PropertyGroup>
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <IncludePath>$(ProjectDir);$(SolutionDir)..\WoodLightFirmware;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <IncludePath>$(ProjectDir);$(SolutionDir)..\WoodLightFirmware;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <Optimization>MaxSpeed</Optimization>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <QtRcc Include="WoodLightSim.qrc" />
+    <QtUic Include="WoodLightSim.ui" />
+    <QtMoc Include="WoodLightSim.h" />
+    <ClCompile Include="..\..\WoodLightFirmware\WLApp.cpp" />
+    <ClCompile Include="..\..\WoodLightFirmware\WLAppExt.cpp" />
+    <ClCompile Include="..\..\WoodLightFirmware\WLApp_Beep.cpp" />
+    <ClCompile Include="..\..\WoodLightFirmware\WLApp_Clock.cpp" />
+    <ClCompile Include="..\..\WoodLightFirmware\WLApp_HomeAssistant.cpp" />
+    <ClCompile Include="..\..\WoodLightFirmware\WLApp_Menu.cpp" />
+    <ClCompile Include="..\..\WoodLightFirmware\WLApp_Message.cpp" />
+    <ClCompile Include="..\..\WoodLightFirmware\WLApp_Pacman.cpp" />
+    <ClCompile Include="..\..\WoodLightFirmware\WLApp_Setup.cpp" />
+    <ClCompile Include="..\..\WoodLightFirmware\WLApp_Snake.cpp" />
+    <ClCompile Include="..\..\WoodLightFirmware\WLApp_Update.cpp" />
+    <ClCompile Include="..\..\WoodLightFirmware\WLBeeps.cpp" />
+    <ClCompile Include="..\..\WoodLightFirmware\WLButtons.cpp" />
+    <ClCompile Include="..\..\WoodLightFirmware\WLDisplay.cpp" />
+    <ClCompile Include="..\..\WoodLightFirmware\WLHttp.cpp" />
+    <ClCompile Include="..\..\WoodLightFirmware\WLInput.cpp" />
+    <ClCompile Include="..\..\WoodLightFirmware\WLJson.cpp" />
+    <ClCompile Include="..\..\WoodLightFirmware\WLMenu.cpp" />
+    <ClCompile Include="..\..\WoodLightFirmware\WLScroller.cpp" />
+    <ClCompile Include="..\..\WoodLightFirmware\WLStr.cpp" />
+    <ClCompile Include="..\..\WoodLightFirmware\WLSystem.cpp" />
+    <ClCompile Include="Preferences.cpp" />
+    <ClCompile Include="SoundEffect.cpp" />
+    <ClCompile Include="MD_MAX72xx_font.cpp" />
+    <ClCompile Include="WiFi.cpp" />
+    <ClCompile Include="WoodLightWidget.cpp" />
+    <ClCompile Include="WoodLightSim.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="WoodLightWidget.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\WoodLightFirmware\WLApp.h" />
+    <ClInclude Include="..\..\WoodLightFirmware\WLAppExt.h" />
+    <ClInclude Include="..\..\WoodLightFirmware\WLApp_Beep.h" />
+    <ClInclude Include="..\..\WoodLightFirmware\WLApp_Clock.h" />
+    <ClInclude Include="..\..\WoodLightFirmware\WLApp_HomeAssistant.h" />
+    <ClInclude Include="..\..\WoodLightFirmware\WLApp_Menu.h" />
+    <ClInclude Include="..\..\WoodLightFirmware\WLApp_Message.h" />
+    <ClInclude Include="..\..\WoodLightFirmware\WLApp_Pacman.h" />
+    <ClInclude Include="..\..\WoodLightFirmware\WLApp_Setup.h" />
+    <ClInclude Include="..\..\WoodLightFirmware\WLApp_Snake.h" />
+    <ClInclude Include="..\..\WoodLightFirmware\WLApp_Update.h" />
+    <ClInclude Include="..\..\WoodLightFirmware\WLBeeps.h" />
+    <ClInclude Include="..\..\WoodLightFirmware\WLButtons.h" />
+    <ClInclude Include="..\..\WoodLightFirmware\WLDisplay.h" />
+    <ClInclude Include="..\..\WoodLightFirmware\WLHttp.h" />
+    <ClInclude Include="..\..\WoodLightFirmware\WLInput.h" />
+    <ClInclude Include="..\..\WoodLightFirmware\WLJson.h" />
+    <ClInclude Include="..\..\WoodLightFirmware\WLMenu.h" />
+    <ClInclude Include="..\..\WoodLightFirmware\WLScroller.h" />
+    <ClInclude Include="..\..\WoodLightFirmware\WLStr.h" />
+    <ClInclude Include="..\..\WoodLightFirmware\WLSystem.h" />
+    <ClInclude Include="ArduinoJson.h" />
+    <ClInclude Include="MD_MAX72xx_lib.h" />
+    <ClInclude Include="Preferences.h" />
+    <ClInclude Include="SoundEffect.h" />
+    <ClInclude Include="MD_MAX72xx_font.h" />
+    <ClInclude Include="WiFi.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\WoodLightFirmware\WoodLightFirmware.ino" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
